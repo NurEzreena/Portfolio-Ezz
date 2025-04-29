@@ -1,10 +1,4 @@
 import { Button } from "@/components/ui/button";
-import {
-  NavigationMenu,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList,
-} from "@/components/ui/navigation-menu";
 // @ts-ignore
 import { faHeart } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -52,29 +46,29 @@ export default function HomePage(): React.ReactElement  {
     <ul className="flex space-x-8">
       <li><Link href="/" className="text-gray-800 hover:bg-gray-100 px-2 py-3 rounded-full">Home</Link></li>
       <li><Link href="/about" className="text-gray-800 hover:bg-gray-100 px-2 py-3 rounded-full">About Me</Link></li>
-      <li><Link href="/blog" className="text-gray-800 hover:bg-gray-100 px-2 py-3 rounded-full">My Blog</Link></li>
+      <li><Link href="/myblog" className="text-gray-800 hover:bg-gray-100 px-2 py-3 rounded-full">My Blog</Link></li>
       <li><Link href="/contact" className="text-gray-800 hover:bg-gray-100 px-2 py-3 rounded-full">Contact Me</Link></li>
     </ul>
   </nav>
   
-  {/* Social Icons positioned on the right */}
-  <div className="absolute right-6 flex items-center gap-4">
-    {socialLinks.map((link, index) => (
-      <a
-        key={index}
-        href={link.href}
-        aria-label={link.label}
-        className="text-gray-800 hover:text-gray-600 transition-colors"
-      >
-        {link.icon}
-      </a>
-    ))}
-  </div>
-</header>
+        {/* Social Icons   */}
+        <div className="absolute right-6 flex items-center gap-4">
+          {socialLinks.map((link, index) => (
+            <a
+              key={index}
+              href={link.href}
+              aria-label={link.label}
+              className="text-gray-800 hover:text-gray-600 transition-colors"
+            >
+              {link.icon}
+            </a>
+          ))}
+        </div>
+      </header>
 
       {/* Main content */}
       <section className="flex flex-col items-center justify-center flex-grow text-center px-4">
-        <Button variant="outline" className="rounded-full mb-4 px-6">
+        <Button variant="outline" className="rounded-full mb-4 px-6 animate-pulse">
           Hello !
         </Button>
 
@@ -87,12 +81,12 @@ export default function HomePage(): React.ReactElement  {
 
       {/* Portfolio section with semi-circle */}
       <div className="w-full relative">
-        <div className="bg-[#ff5842] h-[300px] rounded-t-full max-w-2xl mx-auto flex items-center justify-center">
+        <div className="bg-[#ff5842] h-[300px] rounded-t-full max-w-2xl mx-auto flex items-center justify-center ">
           <Button
             variant="outline"
             className="bg-transparent text-white border-white hover:bg-white/10 rounded-full px-6 py-2 flex items-center gap-2 mt-8"
           >
-            Get in touch  <FontAwesomeIcon icon={faArrowUpRightFromSquare} className="h-4 w-4" />
+            FIND OUT MORE  <FontAwesomeIcon icon={faArrowUpRightFromSquare} className="h-4 w-4 " />
           </Button>
         </div>
       </div>

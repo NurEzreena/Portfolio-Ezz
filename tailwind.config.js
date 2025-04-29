@@ -4,7 +4,8 @@ module.exports = {
     theme: {
       extend: {
         fontFamily: {
-          bowlby: ['"Bowlby One SC"', 'cursive'],roboto: ['Roboto', 'sans-serif'],
+          figtree: ['"Figtree"', 'sans-serif'],
+          roboto: ['Roboto', 'sans-serif'],
         },
       },
     },
