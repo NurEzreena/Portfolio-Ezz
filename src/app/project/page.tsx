@@ -1,127 +1,91 @@
 
- import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
- import { faAngleDown } from '@fortawesome/free-solid-svg-icons';
- import React from "react";
-import Header
- from "@/components/header";
-export default function project(): React.ReactElement {
-     
-    return(
-      <main className="min-h-screen flex flex-col items-center relative bg-[#ffffff]">
 
-       {/*header*/}
-       <Header />
+import React from "react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import Header from "@/components/header";
+import Footer from "@/components/footer";
+import { createClient } from "../../../utils/supabase/server";
 
+export default async function Project() {
 
+  const supabase = await createClient()
 
-        <div className="w-full  relative ">
-          <div className="bg-[#2e2b6f] h-[300px] w-full rounded-b-full overflow-hidden ">
+  const { data: project} = await supabase.from('project').select()
 
-          <div className="absolute text-5xl inset-0 flex flex-col items-center justify-center text-white font-figtree">
-          <h1 className="box-decoration-clone bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 to-pink-500 text-center font-bold text-5xl mb-4">
-              MY BLOG</h1> 
-             <h2 className="text-2xl md:text-4xl  text-center ">
-             Feel free to explore my projects below</h2>
-              <FontAwesomeIcon icon={faAngleDown} className="h-12 w-6  inset-x-0 bottom-0 h-20  animate-bounce " />
-              </div>
-               
-            </div>
-        </div> 
+  console.log(project);
 
-         {/* Description project  */}
-      <blockquote className="text-center text-2xl font-semibold text-gray-900 italic p-4">
-         Here’s a glimpse of projects I’ve built 
-          
-          each crafted with passion and creativity!
-      </blockquote>
-       
-       {/* picture of project */}
-      <div className="flex w-full justify-between">
-        <img className="w-[500px] object-contain  " src="images/website.png"/>
-          
-        <img className="w-[500px] object-contain  " src="images/mobile.png"/>
-       </div>
-
-        {/* project box */}
-      <div className="p-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-
-          
-          <div className="cont-grid ">
-            <div className="emoji-grid">🚗</div>
-            <h3 className="project-title">Smart Parking App (EzPark)</h3>
-            <p className="text-sm text-gray-500 dark:text-gray-400 mt-2">
-              A mobile app  to make it easier for drivers to pay for parking fees.
-            </p>
-          </div>
-
-          
-          <div className="cont-grid  ">
-            <div className="emoji-grid">💰</div>
-            <h3 className="project-title">Expense Tracking App (MoneyMap)</h3>
-            <p className="text-sm text-gray-500 dark:text-gray-400 mt-2">
-            A  mobile app for simplifying personal expense and
-            income management and planning.
-            </p>
-          </div>
-
-           
-          <div className="cont-grid  ">
-            <div className="emoji-grid">📞</div>
-            <h3 className="project-title">CRM App (Oceanica)</h3>
-            <p className="text-sm text-gray-500 dark:text-gray-400 mt-2">
-            A centralized communication hub, feedback and 
-            issue tracking tool  and analytics dashboard.
-            </p>
-          </div>
-
-           
-          <div className="cont-grid ">
-            <div className="emoji-grid">📊</div>
-            <h3 className="project-title">Budgeting App (Spendwise)</h3>
-            <p className="text-sm text-gray-500 dark:text-gray-400 mt-2">
-             Tracking expenses and planning future budgets
-            </p>
-          </div>
-
-           
-          <div className="cont-grid  ">
-            <div className="emoji-grid">🛍️</div>
-            <h3 className="project-title">Online Shopping App (DaisyDrift Hijab)</h3>
-            <p className="text-sm text-gray-500 dark:text-gray-400 mt-2">
-              Shop beautiful hijabs and accessories easily online.
-            </p>
-          </div>
-
-           
-          <div className="cont-grid  ">
-            <div className="emoji-grid">🏦</div>
-            <h3 className="project-title">Savings Goal App (MoneyLoom)</h3>
-            <p className="text-sm text-gray-500 dark:text-gray-400 mt-2">
-              Set, track, and achieve your savings goals efficiently.
-            </p>
-          </div>
-
-        </div>
-      </div>
-
-      {/* text link for github */}
-      <h2 className="text-3xl font-bold text-gray-800 italic p-4">
-      You can view my project on GitHub here:&nbsp;
-        <a href="https://github.com/NurEzreena"  className="text-pink-500 hover:underline hover:text-pink-600 transition">
-          Click here!
-        </a>
-      </h2>
-
-
-     
-
-
-        {/* Footer */}
-      <footer className="px-4  py-6 text-center text-lg text-black">
-          © 2025 Nur Ezreena
-      </footer>    
-            
-       </main>
-    );
+  
+  const projects = [
+    {
+      title: "Smart Parking App (EzPark)",
+      description: "A mobile app to make it easier for drivers to pay for parking fees.",
+      url: "https://github.com/yourusername/ezpark"  
+    },
+    {
+      title: "Expense Tracking App (Money Map)",
+      description: "A mobile app for simplifying personal expense and income management and planning.",
+      url: "https://github.com/yourusername/moneymap"
+    },
+    {
+      title: "CRM App (Oceanica)",
+      description: "A centralized communication hub, feedback and issue tracking tool and analytics dashboard.",
+      url: "https://github.com/yourusername/oceanica"
+    },
+    {
+      title: "Budgeting App (Spendwise)",
+      description: "Tracking expenses and planning future budgets.",
+      url: "https://github.com/yourusername/spendwise"
+    },
+    {
+      title: "Ecommerce App (DaisyDrift Hijab)",
+      description: "Shop beautiful hijabs and accessories easily online.",
+      url: "https://github.com/yourusername/daisydrift"
+    },
+    {
+      title: "Savings Goal App (MoneyLoom)",
+      description: "Set, track and achieve your savings goals efficiently.",
+      url: "https://github.com/yourusername/moneyloom"
     }
+  ];
+
+  return (
+    <main>
+      <Header />
+
+      <section className="py-16 px-4 bg-white">
+        <div className="max-w-6xl mx-auto text-center">
+          <h2 className="text-4xl font-bold mb-3 text-black flex items-center justify-center gap-3">
+            PROJECTS
+            <FontAwesomeIcon icon={faGithub} className="text-black text-4xl" />
+          </h2>
+
+          <p className="text-gray-600 mb-10 text-base">
+            Feel free to explore my projects below.
+          </p>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {projects.map((project, idx) => (
+              <a
+                key={idx}
+                href={project.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-gray-100 rounded-lg p-6 shadow-sm hover:shadow-md hover:bg-gray-200 transition duration-300 text-left block"
+              >
+                <h3 className="font-semibold text-lg mb-2 text-gray-800">{project.title}</h3>
+                <p className="text-sm text-gray-700">{project.description}</p>
+              </a>
+            ))}
+          </div>
+
+          <p className="mt-12 text-sm text-gray-500">
+            Here’s a glimpse of projects I’ve built each crafted with passion and creativity!
+          </p>
+        </div>
+      </section>
+
+      <Footer />
+    </main>
+  );
+}
