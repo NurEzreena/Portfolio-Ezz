@@ -1,4 +1,4 @@
-import Header from "@/components/header";
+// import Header from "@/components/header";
 import Footer from "@/components/footer";
 import Image from "next/image";
 import { createClient } from "../../utils/supabase/client";
@@ -43,7 +43,7 @@ export default async function AboutMe() {
 
   return (
     <main className="font-sans">
-      <Header />
+      {/* <Header /> */}
 
       {/* Hero Section */}
       <section className="grid grid-cols-1 md:grid-cols-2 border-b">
