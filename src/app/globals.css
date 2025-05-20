@@ -28,24 +28,9 @@ body {
 
 .text-stroke {
   color: white;
-  -webkit-text-stroke: 1px grey ;
- }
+  -webkit-text-stroke: 1px grey;
+}
 
 .font-figtree {
   font-family: var(--font-figtree);
-}
-
-.cont-grid {
-  @apply  dark:bg-indigo-900 w-[300px] h-[200px] rounded-lg px-6 py-8 ring shadow-xl    dark:text-white flex flex-col items-center justify-center text-center 
-           hover:scale-105 transition-transform duration-300 hover:scale-110 hover:bg-indigo-500 ;
-}
-.emoji-grid{
-  @apply text-indigo-500 text-4xl
-}
-.project-title{
-  @apply text-white tracking-tight mt-4 font-semibold font-sans ;
-}
-
-.cont-openstate{
- @apply border border-transparent open:border-black/10 open:bg-gray-100 rounded-lg p-4;
 }
