@@ -17,39 +17,6 @@ export default async function Project() {
 
   console.log(project);
 
-  // const projects = [
-  //   {
-  //     title: "Smart Parking App (EzPark)",
-  //     description: "A mobile app to make it easier for drivers to pay for parking fees.",
-  //     url: "https://github.com/yourusername/ezpark"
-  //   },
-  //   {
-  //     title: "Expense Tracking App (Money Map)",
-  //     description: "A mobile app for simplifying personal expense and income management and planning.",
-  //     url: "https://github.com/yourusername/moneymap"
-  //   },
-  //   {
-  //     title: "CRM App (Oceanica)",
-  //     description: "A centralized communication hub, feedback and issue tracking tool and analytics dashboard.",
-  //     url: "https://github.com/yourusername/oceanica"
-  //   },
-  //   {
-  //     title: "Budgeting App (Spendwise)",
-  //     description: "Tracking expenses and planning future budgets.",
-  //     url: "https://github.com/yourusername/spendwise"
-  //   },
-  //   {
-  //     title: "Ecommerce App (DaisyDrift Hijab)",
-  //     description: "Shop beautiful hijabs and accessories easily online.",
-  //     url: "https://github.com/yourusername/daisydrift"
-  //   },
-  //   {
-  //     title: "Savings Goal App (MoneyLoom)",
-  //     description: "Set, track and achieve your savings goals efficiently.",
-  //     url: "https://github.com/yourusername/moneyloom"
-  //   }
-  // ];
-
   return (
     <main>
       <Header />
@@ -65,8 +32,8 @@ export default async function Project() {
             Feel free to explore my projects below.
           </p>
 
-          {/* <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {projects.map((project, index) => (
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {project?.map((project: Iproject, index) => (
               <a
                 key={index}
                 href={project.url}
@@ -74,11 +41,13 @@ export default async function Project() {
                 rel="noopener noreferrer"
                 className="bg-gray-100 rounded-lg p-6 shadow-sm hover:shadow-md hover:bg-gray-200 transition duration-300 text-left block"
               >
-                <h3 className="font-semibold text-lg mb-2 text-gray-800">{project.title}</h3>
+                <h3 className="font-semibold text-lg mb-2 text-gray-800">
+                  {project.title}
+                </h3>
                 <p className="text-sm text-gray-700">{project.description}</p>
               </a>
             ))}
-          </div> */}
+          </div>
 
           <p className="mt-12 text-sm text-gray-500">
             Here’s a glimpse of projects I’ve built each crafted with passion
