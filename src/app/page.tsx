@@ -45,23 +45,22 @@ export default async function AboutMe() {
   return (
     <main className="font-sans">
       <Header />
-
       {/* Hero Section */}
       <section className="grid grid-cols-1 md:grid-cols-2 border-b">
-        {/* Left Column: Internship Details */}
+        {/* Left Column */}
         <div className="bg-[#FF814B] text-white px-8 py-10 flex flex-col justify-center">
-          {internship?.map((intern, index) => (
+          {internship?.map((internship: Iinternship, index) => (
             <div
               key={index}
               className="space-y-4 text-center md:text-left max-w-md mx-auto"
             >
               <h1 className="text-5xl font-extrabold leading-tight">
-                {intern.title}
+                {internship.title}
               </h1>
-              <p className="text-sm">{intern.description}</p>
+              <p className="text-sm">{internship.description}</p>
               <div className="flex justify-end">
                 <a
-                  href={intern.resume}
+                  href={internship.resume}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="px-6 py-2 bg-white text-orange-500 rounded-full font-semibold hover:bg-orange-100 transition"
@@ -73,10 +72,38 @@ export default async function AboutMe() {
           ))}
         </div>
 
-        {/* Right Column: Placeholder for Additional Content */}
-        <div className="p-6">{/* Add your additional content here */}</div>
+        {/* Right Column */}
+        <div className="bg-white flex items-center justify-center p-8">
+          <img
+            src="/path-to-your-image.jpg"
+            alt="Illustration"
+            className="max-w-full h-auto"
+          />
+        </div>
       </section>
 
+      {/* <section className="grid grid-cols-1 md:grid-cols-2 border-b">
+        <div className="bg-[#FF814B] text-white px-8 py-10 flex flex-col justify-center p-6">
+          {internship?.map((internship: Iinternship, index) => (
+            <div key={index}>
+              <div className="space-y-4 text-center md:text-left max-w-md">
+                <h1 className="text-5xl font-extrabold leading-tight">
+                  {internship.title}
+                  <br />
+                </h1>
+                <p className="text-sm">{internship.description}</p>
+                <div className="flex justify-end">
+                  <button className="px-6 py-2 bg-white text-orange-500 rounded-full font-semibold hover:bg-orange-100 transition">
+                    <a href={internship.resume} target="_blank" rel="resume">
+                      Ezreena’s Resume
+                    </a>
+                  </button>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section> */}
       {/* About Me Section */}
       <section className="bg-[#F7F6EB] py-14 px-4 flex justify-center">
         <div className="bg-[#D1D175] p-6 rounded-md text-center max-w-2xl relative">
@@ -99,7 +126,6 @@ export default async function AboutMe() {
           />
         </div>
       </section>
-
       {/* Proficiency Section */}
       <section className="bg-[#A5B7E5] py-16 px-6 relative">
         {/* Section Label */}
@@ -133,7 +159,6 @@ export default async function AboutMe() {
           ))}
         </div>
       </section>
-
       {/* Educational Journey Section */}
       <section className="bg-[#FFF4C5] py-12">
         <h2 className="text-3xl font-bold text-center mb-10 text-[#A1A244]">
@@ -151,7 +176,6 @@ export default async function AboutMe() {
           ))}
         </div>
       </section>
-
       <Footer />
     </main>
   );
