@@ -2,7 +2,8 @@ import Header from "@/components/header";
 import Footer from "@/components/footer";
 import Image from "next/image";
 import { createClient } from "../../utils/supabase/client";
-import FlipCard from "@/components/flip-card";
+// import FlipCard from "@/components/flip-card";
+import FlipCard from "@/components/flipcard";
 
 interface Iabout {
   description: string;
@@ -47,34 +48,33 @@ export default async function AboutMe() {
 
       {/* Hero Section */}
       <section className="grid grid-cols-1 md:grid-cols-2 border-b">
-        <div className="bg-[#FF814B] text-white px-8 py-10 flex flex-col justify-center p-6">
-          {internship?.map((internship: Iinternship, index) => (
-            <div key={index}>
-              <div className="space-y-4 text-center md:text-left max-w-md">
-                <h1 className="text-5xl font-extrabold leading-tight">
-                  {internship.title}
-                  <br />
-                </h1>
-                <p className="text-sm">{internship.description}</p>
-                <div className="flex justify-end">
-                  <button className="px-6 py-2 bg-white text-orange-500 rounded-full font-semibold hover:bg-orange-100 transition">
-                    <a href={internship.resume} target="_blank" rel="resume">
-                      Ezreena’s Resume
-                    </a>
-                  </button>
-                </div>
+        {/* Left Column: Internship Details */}
+        <div className="bg-[#FF814B] text-white px-8 py-10 flex flex-col justify-center">
+          {internship?.map((intern, index) => (
+            <div
+              key={index}
+              className="space-y-4 text-center md:text-left max-w-md mx-auto"
+            >
+              <h1 className="text-5xl font-extrabold leading-tight">
+                {intern.title}
+              </h1>
+              <p className="text-sm">{intern.description}</p>
+              <div className="flex justify-end">
+                <a
+                  href={intern.resume}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-6 py-2 bg-white text-orange-500 rounded-full font-semibold hover:bg-orange-100 transition"
+                >
+                  Ezreena’s Resume
+                </a>
               </div>
             </div>
           ))}
         </div>
 
-        <div className="bg-[#F7F6EB] flex justify-center items-center p-6">
-          <img
-            src="/images/Profile.png"
-            alt="Ezreena with Minion"
-            className="w-auto max-h-[full] object-contain"
-          />
-        </div>
+        {/* Right Column: Placeholder for Additional Content */}
+        <div className="p-6">{/* Add your additional content here */}</div>
       </section>
 
       {/* About Me Section */}
@@ -90,6 +90,13 @@ export default async function AboutMe() {
               </p>
             </div>
           ))}
+        </div>
+        <div className="bg-[#F7F6EB] flex justify-center items-center p-6">
+          <img
+            src="/images/Profile.png"
+            alt="Ezreena with Minion"
+            className="w-auto max-h-[full] object-contain"
+          />
         </div>
       </section>
 
