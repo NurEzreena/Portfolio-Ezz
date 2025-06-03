@@ -12,8 +12,9 @@ module.exports = {
     },
     extend: {
       fontFamily: {
-        figtree: ['"Figtree"', 'sans-serif'],
-        sans: ["ui-sans-serif", "system-ui", "sans-serif", '"Apple Color Emoji"'],
+        figtree: ['"Figtree"', "sans-serif"],
+        poppins: ["var(--font-poppins)"],
+        libreBaskerville: ["var(--font-libre-baskerville)"],
       },
       keyframes: {
         "accordion-down": {

@@ -6,11 +6,7 @@
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  /* --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono); */
-  --font-figtree: var(--font-figtree);
+  --font-poppins: var(--font-popins);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -33,4 +29,21 @@ body {
 
 .font-figtree {
   font-family: var(--font-figtree);
+}
+
+.font-poppins {
+  font-family: var(--font-poppins);
+}
+
+.font-libre-baskerville {
+  font-family: var(--font-libre-baskerville);
+}
+#proficiency .text-3xl.ml-4 {
+  font-size: 80px !important; /* Make emoji font size 80px */
+  width: 80px; /* Set width */
+  height: 80px; /* Set height */
+  line-height: 1; /* Remove extra spacing */
+  display: flex; /* Use flex to center emoji */
+  align-items: center; /* Vertical center */
+  justify-content: center; /* Horizontal center */
 }

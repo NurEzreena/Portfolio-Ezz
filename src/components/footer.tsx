@@ -1,67 +1,35 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faLinkedin, faInstagram } from "@fortawesome/free-brands-svg-icons";
 import { faCopyright } from "@fortawesome/free-solid-svg-icons";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#FF855A] text-black">
-      {/* Contact Section */}
-      <div className="max-w-6xl mx-auto py-10 px-6">
-        <h2 className="text-center text-2xl md:text-3xl font-bold mb-6">
-          CONTACT ME
-        </h2>
-
-        <div className="flex flex-wrap justify-center gap-6 text-sm md:text-base text-gray-800">
-          {/* Phone */}
-          <div className="flex items-center gap-1">
-            <span>+60 14-2424095</span>
-          </div>
-
-          {/* Email */}
-          <div className="flex items-center gap-1">
-            <span>nur.ezreena@time.com.my</span>
-          </div>
-
-          {/* Resume */}
-          <div className="flex items-center gap-1">
-            <a
-              href="/Resume Ezreena.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:underline"
-            >
-              Nur Ezreena’s Resume
-            </a>
-          </div>
-
-          {/* Instagram */}
-          <a
-            href="https://www.instagram.com/yourusername"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Instagram"
-            className="text-lg"
-          >
-            <FontAwesomeIcon icon={faInstagram} />
-          </a>
-
-          {/* LinkedIn */}
-          <a
-            href="https://www.linkedin.com/in/yourusername"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="LinkedIn"
-            className="text-lg"
-          >
-            <FontAwesomeIcon icon={faLinkedin} />
-          </a>
+    <footer className="bg-[#161042] text-white w-full">
+      {/* Top Section: Message + Contact Info */}
+      <div className="w-full flex flex-col md:flex-row justify-between items-start md:items-center px-6 md:px-20 py-16 gap-10 md:gap-12">
+        {/* Left: CTA */}
+        <div className="flex flex-col w-full md:w-1/2">
+          <button className="border border-white px-4 py-1 mb-4 rounded-full text-xs font-semibold w-fit">
+            LET’S CONNECT
+          </button>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-light leading-snug font-libre-baskerville">
+            Feel Free To{" "}
+            <span className="text-[#4DD0E1] font-semibold font-libre-baskerville">
+              Send A Message!
+            </span>
+          </h2>
         </div>
-      </div>
 
-      {/* Copyright Section */}
-      <div className="bg-white py-2 border-t text-xs   items-center gap-2 font-semibold p-4">
-        <FontAwesomeIcon icon={faCopyright} />
-        <span className="p-3">2025 BY NUR EZREENA</span>
+        {/* Right: Contact Info */}
+        <div className="w-full md:w-1/2 text-left md:text-right">
+          <div className="mb-4">
+            <p className="text-sm text-gray-400">EMAIL</p>
+            <p className="text-lg break-words">nur.ezreena@time.com.my</p>
+          </div>
+          <div>
+            <p className="text-sm text-gray-400">PHONE NUMBER</p>
+            <p className="text-lg">+60 123456789</p>
+          </div>
+        </div>
       </div>
     </footer>
   );

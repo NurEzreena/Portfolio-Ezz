@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Figtree } from "next/font/google";
+import { Geist, Figtree, Poppins, Libre_Baskerville } from "next/font/google";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -11,6 +11,19 @@ const figtree = Figtree({
   variable: "--font-figtree",
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
+});
+
+const poppins = Poppins({
+  subsets: ["latin"],
+  weight: ["400", "600", "700"],
+  variable: "--font-poppins",
+});
+
+const libreBaskerville = Libre_Baskerville({
+  subsets: ["latin"],
+  weight: ["400"],
+  style: ["normal", "italic"],
+  variable: "--font-libre-baskerville",
 });
 
 export const metadata: Metadata = {
@@ -26,7 +39,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable}  antialiased ${figtree.variable} `}
+        className={`${geistSans.variable} ${poppins.variable} ${libreBaskerville.variable}  antialiased ${figtree.variable} `}
       >
         {children}
       </body>
