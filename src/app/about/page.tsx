@@ -41,7 +41,7 @@ export default async function AboutMe() {
                   {about.title}
                 </p>
                 <h1 className="text-3xl sm:text-4xl md:text-5xl font-libre-baskerville font-medium leading-snug text-[#1C093C] mb-4">
-                  I'm {about.name}
+                  I&apos;m {about.name}
                   <span className="text-[#8B5CF6]"> Ezz</span>.
                 </h1>
               </div>
