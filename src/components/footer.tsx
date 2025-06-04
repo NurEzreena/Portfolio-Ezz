@@ -1,6 +1,3 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCopyright } from "@fortawesome/free-solid-svg-icons";
-
 const Footer = () => {
   return (
     <footer className="bg-[#161042] text-white w-full">
@@ -23,11 +20,11 @@ const Footer = () => {
         <div className="w-full md:w-1/2 text-left md:text-right">
           <div className="mb-4">
             <p className="text-sm text-gray-400">EMAIL</p>
-            <p className="text-lg break-words">nur.ezreena@time.com.my</p>
+            <p className="text-lg break-words">ezreena.shuhada@time.com.my</p>
           </div>
           <div>
             <p className="text-sm text-gray-400">PHONE NUMBER</p>
-            <p className="text-lg">+60 123456789</p>
+            <p className="text-lg">+60 142424095</p>
           </div>
         </div>
       </div>
