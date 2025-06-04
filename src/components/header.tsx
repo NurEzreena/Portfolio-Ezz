@@ -22,20 +22,23 @@ const Header = () => {
 
         {/* Centered Desktop Navigation */}
         <nav className="hidden md:flex absolute left-1/2 transform -translate-x-1/2 space-x-10 font-semi">
-          <a
+          <Link
             href="/about"
             className="text-black hover:text-[#744FC6] tracking-wide"
           >
             ABOUT
-          </a>
-          <a href="/" className="text-black hover:text-[#744FC6] tracking-wide">
+          </Link>
+          <Link
+            href="/"
+            className="text-black hover:text-[#744FC6] tracking-wide"
+          >
             PROJECTS
-          </a>
+          </Link>
         </nav>
 
         {/* Social Media Icons */}
         <div className="hidden md:flex space-x-4 text-lg text-black">
-          <a
+          <Link
             href="https://www.instagram.com/yourusername"
             target="_blank"
             rel="noopener noreferrer"
@@ -43,8 +46,8 @@ const Header = () => {
             className="hover:text-[#744FC6]"
           >
             <FontAwesomeIcon icon={faInstagram} />
-          </a>
-          <a
+          </Link>
+          <Link
             href="https://www.linkedin.com/in/yourusername"
             target="_blank"
             rel="noopener noreferrer"
@@ -52,7 +55,7 @@ const Header = () => {
             className="hover:text-[#744FC6]"
           >
             <FontAwesomeIcon icon={faLinkedin} />
-          </a>
+          </Link>
         </div>
 
         {/* Mobile Menu Toggle */}
@@ -67,15 +70,18 @@ const Header = () => {
       {/* Mobile Menu */}
       {menuOpen && (
         <div className="md:hidden flex flex-col items-center bg-white px-4 pt-4 pb-6 space-y-4 border-t">
-          <a
+          <Link
             href="/about"
             className="text-black hover:text-[#744FC6] tracking-wide"
           >
             ABOUT
-          </a>
-          <a href="/" className="text-black hover:text-[#744FC6] tracking-wide">
+          </Link>
+          <Link
+            href="/"
+            className="text-black hover:text-[#744FC6] tracking-wide"
+          >
             PROJECTS
-          </a>
+          </Link>
           <div className="flex space-x-6 pt-2">
             <a
               href="https://www.instagram.com/yourusername"
