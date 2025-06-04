@@ -23,6 +23,8 @@ export default async function Project() {
   // const { data: education } = await supabase.from("education").select();
   const { data: project } = await supabase.from("project").select();
 
+  console.log(proficiency);
+  console.log(project);
   return (
     <main className="bg-[#ffffff] text-black font-poppins">
       <Header />

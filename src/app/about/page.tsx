@@ -27,6 +27,8 @@ export default async function AboutMe() {
   const { data: about } = await supabase.from("about").select();
   const { data: education } = await supabase.from("education").select();
 
+  console.log(about);
+  console.log(education);
   return (
     <main className="w-full bg-white min-h-screen text-black font-poppins">
       <Header />
